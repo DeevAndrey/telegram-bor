@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Моя страница</title>
+    <title>Сбор средств</title>
     <link href="style2.1.css" rel="stylesheet"/>
 </head>
 <body>    
@@ -13,16 +13,33 @@
             <form>
                 <div class="form-group">
                     <label for="name">Введите имя :</label>
-                    <input type="text" placeholder="Кого поздравляем" id="name">
+                    <input type="text" id="name" placeholder="Кого поздравляем" id="name">
                 </div>
                 <div class="form-group">
                     <label>Введите ссылку:</label>
-                    <input type="text" placeholder="Ссылка на сбор средств">
+                    <input type="text" id="link" placeholder="Ссылка на сбор средств">
                 </div>
-                <input type="submit" class="btn" value="Полетело">
+                <button id="submit" class="btn"> Отправить</button>
             </form>
 
         </div>
     </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let send = document.getElementById("submit");
+        send.addEventListener("click",()=>{
+            let name = document.getElementById("name").value;
+            let date = document.getElementById("link").value;
+
+            let data = {
+                name: name,
+                date: date,
+            }
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+        });
+        
+    </script>
 </body>
 </html>
