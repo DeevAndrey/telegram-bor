@@ -68,8 +68,8 @@ body{
 .btn:hover{
     opacity: 0.8;
 }
-.select-1{
-    border:none;
+/* .select-1{
+    /* border:none;
     color: #86898f;
     border-bottom: 1px solid black;
     background: transparent;
@@ -77,5 +77,6 @@ body{
     font-size: 3vw;
     font-family: inherit;
     margin-bottom: 20px;
-    padding: 10px 15px 10px;
-}
+    padding: 10px 15px 10px; */
+    
+} */
