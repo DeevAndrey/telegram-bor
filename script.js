@@ -7,7 +7,7 @@ async function getResponce(){
     let index = 0 
     for (let id in content){
         const option = document.createElement('option');
-        option.value = content[index]["userName"];
+        option.value = content[index]["name"];
         option.text = content[index]["name"];
         select1.append(option);
         index+=1
