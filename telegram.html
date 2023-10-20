@@ -32,7 +32,7 @@
         let tg = window.Telegram.WebApp;
         let send = document.getElementById("submit");
         send.addEventListener("click",()=>{
-            let name = document.getElementById("name").value;
+            let name = document.getElementById("name").textContent;
             let date = document.getElementById("link").value;
 
             let data = {
