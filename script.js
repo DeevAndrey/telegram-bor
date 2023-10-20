@@ -1,7 +1,7 @@
 async function getResponce(){
     let response = await fetch("http://localhost:3000/users")
     let content = await response.json()
-    console.log(content[1]["userName"])
+    console.log(content)
 
     const select1 = document.querySelector('.select-1');
     let index = 0 
