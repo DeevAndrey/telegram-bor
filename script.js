@@ -1,5 +1,5 @@
 async function getResponce(){
-    let response = await fetch("http://localhost:3000/users")
+    let response = await fetch("http://localhost:5000/user")
     let content = await response.json()
     console.log(content)
 
